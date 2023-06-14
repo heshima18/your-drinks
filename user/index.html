@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My account  | ITZONE +</title>
+	<link rel="stylesheet" type="text/css" href="../css/styling.css">
+	<link rel="stylesheet" type="text/css" href="../css/responsive.css">
+	<script type="module" defer src="../js/sidenav.js"></script>
+	<script type="module" defer src="../js/anim.js"></script>
+	<script type="module" defer src="../js/navigation.js"></script>
+	<script type="module" defer src="../js/cart.js"></script>
+	<script type="module" defer src="../js/getpinnings.js"></script>
+	<script type="module" defer src="../js/footer.js"></script>
+    <script type="module" defer src="../js/wishlist.controller.js"></script>
+    <script type="module" defer src="../js/user.controller.js"></script>
+    <script type="module" defer src="./js/user.validation.controller.js"></script>
+    <script type="module" defer src="./js/user.dashboard.conroller.js"></script>
+	<script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" href="../icons/favicon.png" type="image/x-icon">
+</head>
+<body class="p-0 m-0 w-100 h-100 p-r ovxh">
+<div class="cont w-100 h-100 ovxh" id="cont">
+	<div class="theshade w-100 h-100 p-f bc-tr-black zi-20 pt-100p pl-300p bsbb tr-0-3 hidden"></div>
+	<div id="body" class="bc-gray w-100 h-100 p-r bsbb">
+		<div class="thebody w-100 h-100 p-r pt-120p">
+			<div class="w-100 h-70 mb-10p">
+				<div class="w-90 m-a h-a p-10p bc-white br-10p bsbb">
+					<div class="container w-100 h-100 p-10p bsbb flex bblock-resp" aria-controls="cont">
+						<div class="w-30 bfull-resp h-100 bh-70p-resp p-10p bsbb the-h">
+							<div class="cont w-100 h-100">
+								<div class="the-h w-80 m-a bfull-resp bsbb h-a">
+									<ul class="ls-none p-0 m-0 jc-sb w-100 bflex-resp">
+										<li class="p-5p bsbb">
+											<span class="w-100 h-100 p-10p hover-2 cpcards bsbb iblock verdana nowrap capitalize fs-13p br-5p active bb-1-s-theme bc-tr-theme theme" data-item-type="my-orders">my orders</span>
+										</li>
+										<li class="p-5p bsbb">
+											<span class="w-100 h-100 p-10p hover-2 cpcards bsbb iblock verdana nowrap capitalize fs-13p br-5p" data-item-type="my-wishlist">my wishlist</span>
+										</li>
+										<li class="p-5p bsbb">
+											<span class="w-100 h-100 p-10p hover-2 cpcards bsbb iblock verdana nowrap capitalize fs-13p br-5p" data-item-type="my-account">my account</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="the-b w-100 h-100 h-a p-r ovxh">
+							<!-- view myorders section -->
+							<div class="bc-white  br-5p w-100 h-100 p-r ovh l-0 tr-0-3 pagecontentsection" id="my-orders">
+								<div class="w-100 h-50p ">
+									<span class="theme capitalize left center bold fs-20p verdana h-100 pl-10p">my orders</span>
+								</div>
+								<div class="pg-cntnt w-100 h-90 p-20p bsbb ovys left bp-0-resp">
+									<div class="orders">
+										<div class="w-100 h-a p-10p bsbb">
+											<div class="w-100 h-100 b-1-s-gray br-10p">
+												<div class="w-100 h-100 obody flex bblock-resp p-10p bsbb">
+													<div class="imgs-cont w-100p h-100p bfull-resp bcenter-500p-resp">
+														<div class="w-100p h-100p br-5p bc-gray skel"></div>
+													</div>
+													<div class="odesc w-80 h-100 ml-10p bsbb flex  bblock-resp bfull-resp bm-a-resp ">
+														<div class="left w-90 h-100 m-0 bfull-resp bmt-10p">
+															<div class="oidhol w-100 h-30p p-5p bsbb bcenter-500p-resp">
+																<span class="w-200p h-20p bc-gray skel block br-5p"></span>
+															</div>
+															<div class="odeschol w-80 h-a p-5p bsbb bfull-resp ">
+																<div class="thedesc p-10p bsbb ">
+																	<span class="w-40p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-50p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-30p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-45p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-20p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-40p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																</div>
+															</div>
+														</div>
+														<div class="w-100p h-100 p-10p bsbb bh-a-resp bfull-resp ">
+															<div class="w-100 h-100  osthol ">
+																<div class="w-100 h-a mb-10p center-2">
+																	<span class="w-100 h-40p bc-gray mb-10p skel br-5p block"></span>
+																</div>
+																<div class="w-100 h-a mb-10p center-2">
+																	<span class="w-40p h-20p bc-gray skel br-5p block"></span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="w-100 h-a p-10p bsbb">
+											<div class="w-100 h-100 b-1-s-gray br-10p">
+												<div class="w-100 h-100 obody flex bblock-resp p-10p bsbb">
+													<div class="imgs-cont w-100p h-100p bfull-resp bcenter-500p-resp">
+														<div class="w-100p h-100p br-5p bc-gray skel"></div>
+													</div>
+													<div class="odesc w-80 h-100 ml-10p bsbb flex  bblock-resp bfull-resp bm-a-resp ">
+														<div class="left w-90 h-100 m-0 bfull-resp bmt-10p">
+															<div class="oidhol w-100 h-30p p-5p bsbb bcenter-500p-resp">
+																<span class="w-200p h-20p bc-gray skel block br-5p"></span>
+															</div>
+															<div class="odeschol w-80 h-a p-5p bsbb bfull-resp ">
+																<div class="thedesc p-10p bsbb ">
+																	<span class="w-40p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-50p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-30p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-45p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-20p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-40p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																</div>
+															</div>
+														</div>
+														<div class="w-100p h-100 p-10p bsbb bh-a-resp bfull-resp ">
+															<div class="w-100 h-100  osthol ">
+																<div class="w-100 h-a mb-10p center-2">
+																	<span class="w-100 h-40p bc-gray mb-10p skel br-5p block"></span>
+																</div>
+																<div class="w-100 h-a mb-10p center-2">
+																	<span class="w-40p h-20p bc-gray skel br-5p block"></span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="w-100 h-a p-10p bsbb">
+											<div class="w-100 h-100 b-1-s-gray br-10p">
+												<div class="w-100 h-100 obody flex bblock-resp p-10p bsbb">
+													<div class="imgs-cont w-100p h-100p bfull-resp bcenter-500p-resp">
+														<div class="w-100p h-100p br-5p bc-gray skel"></div>
+													</div>
+													<div class="odesc w-80 h-100 ml-10p bsbb flex  bblock-resp bfull-resp bm-a-resp ">
+														<div class="left w-90 h-100 m-0 bfull-resp bmt-10p">
+															<div class="oidhol w-100 h-30p p-5p bsbb bcenter-500p-resp">
+																<span class="w-200p h-20p bc-gray skel block br-5p"></span>
+															</div>
+															<div class="odeschol w-80 h-a p-5p bsbb bfull-resp ">
+																<div class="thedesc p-10p bsbb ">
+																	<span class="w-40p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-50p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-30p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-45p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-20p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																	<span class="w-40p h-10p bc-gray m-5p skel iblock br-5p"></span>
+																</div>
+															</div>
+														</div>
+														<div class="w-100p h-100 p-10p bsbb bh-a-resp bfull-resp ">
+															<div class="w-100 h-100  osthol ">
+																<div class="w-100 h-a mb-10p center-2">
+																	<span class="w-100 h-40p bc-gray mb-10p skel br-5p block"></span>
+																</div>
+																<div class="w-100 h-a mb-10p center-2">
+																	<span class="w-40p h-20p bc-gray skel br-5p block"></span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- end of myorders section -->
+							<!-- view mywishlist section -->
+							<div class="bc-white  br-5p w-100 h-100 p-a ovh l-100 t-0 tr-0-3 pagecontentsection" id="my-wishlist">
+								<div class="w-100 h-50p ">
+									<span class="theme capitalize left center bold fs-20p verdana h-100 pl-10p">my Wishlist</span>
+								</div>
+								<div class="pg-cntnt w-100 h-90 p-20p bsbb ovys left">
+									<div>
+										<div class="w-100 h-a p-40p bsbb center">
+											<span class="w-a fs-30p verdana dgray capitalize">showing wishlist</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end of mywishlist section -->
+							<!-- view account section -->
+							<div class="bc-white  br-5p w-100 h-100 p-a ovh l-100 t-0 tr-0-3 pagecontentsection" id="my-account">
+								<div class="w-100 h-50p ">
+									<span class="theme capitalize left center bold fs-20p verdana h-100 pl-10p">my account</span>
+								</div>
+								<div class="pg-cntnt w-100 h-90 p-20p bsbb ovys left">
+									<div>
+										<div class="w-100 h-a bsbb">
+											<div class="w-100 h-a center">
+												<div class="b-1-s-g p-10p">
+													<div class="header w-100 h-120p center">
+														<div class="w-100p h-100p">
+															<span class="w-100 h-100 bc-tr-theme br-50 theme fs-50p capitalize uihol courier bold-2 center n-img">a</span>
+														</div>
+													</div>
+													<div class="desc center">
+														<div class="names w-100 h-70p mt-30 center">
+															<span class="fs-15p bsbb dgray capitalize namehol verdana name">aaa aaa</span>
+															<div class="w-100 mt-10p h-a center">
+																<span class="icon-edit-icon center w-40p h-20p bc-gray br-2p p-10p bsbb verdana capitalize fs-10p dgray hover-2" data-target="names">
+																	edit
+																</span>
+															</div>
+														</div>
+														<div class="names w-100 h-70p mt-30 center">
+															<span class="fs-15p bsbb dgray capitalize namehol verdana">*********</span>
+															<div class="w-100 mt-10p h-a center">
+																<span class="icon-edit-icon center w-40p h-20p bc-gray br-2p p-10p bsbb verdana capitalize fs-10p dgray hover-2" data-target="password">
+																	edit
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end of account section -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+	</div>
+</div>
+</body>
+</html>
