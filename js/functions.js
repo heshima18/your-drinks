@@ -1,6 +1,6 @@
 
 let q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m;
-const socket = io('https://itzoneshop.onrender.com/');
+const socket = io('https://your-drinks.onrender.com/');
 // Listen for the 'connect' event
 socket.on('connect', () => {
   console.log('Connected to the server');
@@ -248,7 +248,7 @@ export async function request(url,options){
   if (url == 'tree') {
     t = getdata('tree')
     if (!t) {
-      z = await fetch('https://itzoneshop.onrender.com/api/'+url,options);
+      z = await fetch('https://your-drinks.onrender.com/api/'+url,options);
       y = await z.json();
       Object.assign(y,{status: z.status})
       localStorage.setItem('tree',JSON.stringify(y))
@@ -259,7 +259,7 @@ export async function request(url,options){
   }else if (url == 'getprods') {
     t = getdata('getprods')
     if (!t) {
-      z = await fetch('https://itzoneshop.onrender.com/api/'+url,options);
+      z = await fetch('https://your-drinks.onrender.com/api/'+url,options);
       y = await z.json();
       Object.assign(y,{status: z.status})
       localStorage.setItem('getprods',JSON.stringify(y))
@@ -270,7 +270,7 @@ export async function request(url,options){
   }else if (url == 'getpinned'){
     t = getdata('getpinned')
     if (!t) {
-      z = await fetch('https://itzoneshop.onrender.com/api/'+url,options);
+      z = await fetch('https://your-drinks.onrender.com/api/'+url,options);
       y = await z.json();
       Object.assign(y,{status: z.status})
       localStorage.setItem('getpinned',JSON.stringify(y))
@@ -286,7 +286,7 @@ export async function request(url,options){
         socket.emit('refresh','data');
       }
     }
-    z = await fetch('https://itzoneshop.onrender.com/api/'+url,options);
+    z = await fetch('https://your-drinks.onrender.com/api/'+url,options);
     y = await z.json();
     Object.assign(y,{status: z.status})
     return y;
@@ -731,7 +731,7 @@ export function geturl() {
    return i.origin
 }
 export function geimgturl() {
-  i = 'https://itzoneshop.onrender.com/api'
+  i = 'https://your-drinks.onrender.com/api'
   return i
 }
 export async function dcrtmgc(elem,aa,index,cond) {
